@@ -9,11 +9,18 @@ services:
       - 8094:8094
     networks:
       - devnet
-  scc:
+  scc-server:
     image: cgelias/spring-cloud
     stdin_open: true
     volumes:
-      - /home/pnradmin/elias_test/scc-encrypted-config/src:/local/git
+      - /home/pnradmin/elias_test/scc-encrypted-config/src/configuration-service:/local/git
+    networks:
+      - devnet
+  scc-client:
+    image: cgelias/spring-cloud
+    stdin_open: true
+    volumes:
+      - /home/pnradmin/elias_test/scc-encrypted-config/src/configuration-client:/local/git
     networks:
       - devnet
 networks:
