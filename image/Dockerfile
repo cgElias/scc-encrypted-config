@@ -1,4 +1,4 @@
-FROM java:7
+FROM java:8
 
 # update packages and install maven
 RUN  \
