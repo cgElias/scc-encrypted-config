@@ -9,8 +9,9 @@ services:
       - 8094:8094
     networks:
       - devnet
-  maven:
-    image: maven:3.5.2-jdk-7
+  scc:
+    image: cgelias/spring-cloud
+    stdin_open: true
     networks:
       - devnet
 networks:
