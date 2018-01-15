@@ -13,3 +13,5 @@ services:
     image: maven:3.5.2-jdk-7
     networks:
       - devnet
+networks:
+  devnet:
