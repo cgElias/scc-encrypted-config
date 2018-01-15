@@ -12,6 +12,8 @@ services:
   scc:
     image: cgelias/spring-cloud
     stdin_open: true
+    volumes:
+      - /home/pnradmin/elias_test/scc-encrypted-config:/local/git
     networks:
       - devnet
 networks:
