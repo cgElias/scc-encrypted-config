@@ -22,6 +22,14 @@ class MessageRestController {
     @Value("${message:Hello default}")
     private String message;
 
+    @Value("${password:default value}")
+    private String password;
+
+    @RequestMapping("/password")
+    String getPassword() {
+        return this.password;
+    }
+
     @RequestMapping("/message")
     String getMessage() {
         return this.message;
